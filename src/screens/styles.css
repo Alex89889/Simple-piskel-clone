@@ -1,0 +1,398 @@
+/* RESET STYLES */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #1D1D1D;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 400;
+  color: #fff;
+}
+
+p {
+  margin: 0;
+}
+
+/*STYLES */
+
+body {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  background-color: #404040;
+  color: white;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2%;
+  background: #2D2D2D;
+}
+
+.header__piskel-name {
+  text-align: center;
+  color: #888;
+  font-size: 1.7rem;
+  border: none;
+  background: #2D2D2D;
+}
+
+.navigation {
+  display: flex;
+}
+
+.navigation__item {
+  margin: 3px;
+  padding: 5px;
+  background-color: #FFCB05;
+  border-radius: 3px;
+  color: black;
+}
+
+
+.navigation__ref {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.navigation__item:hover {
+  cursor: pointer;
+  background-color: #fff;
+  transition: background-color 0.5s;
+}
+
+.navigation__item:not(hover) {
+  background-color: #FFCB05;
+  transition: background-color 0.5s;
+}
+
+.line-width-wrapper {
+  display: flex;
+  width: 100px;
+  height: 30px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.line-1 {
+  width: 7px;
+  height: 7px;
+  background-color: white;
+}
+
+.line-2 {
+  width: 14px;
+  height: 14px;
+  background-color: white;
+}
+
+.line-3 {
+  width: 21px;
+  height: 21px;
+  background-color: white;
+}
+
+.line-4 {
+  width: 28px;
+  height: 28px;
+  background-color: white;
+}
+
+.chosen-line {
+  border: 1px solid yellow;
+}
+
+.selected-frame{
+   /* border: 3px solid gold;*/
+}
+.panels-wrapper {
+  width: 200px;
+  height: 800px;
+  margin-left: 3%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.toolbar {
+  margin: auto 5px;
+  width: 96px;
+  grid-area: toolbar;
+}
+
+.pen-size {
+  display: flex;
+  justify-content: center;
+  margin: 1px 0;
+}
+
+.pen-size__item {
+  width: 22px;
+  height: 22px;
+  margin: 0 1px;
+  text-align: center;
+  border: 3px solid #2D2D2D;
+}
+
+.pen-size__item:hover {
+  cursor: pointer;
+  border: 3px solid rgb(73, 73, 73);
+}
+
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  width: 96px;
+  margin: 10px 0;
+}
+
+.tools__item {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  margin: 1px 1px;
+  border: 1px solid rgb(73, 73, 73);
+  background: #2D2D2D;
+}
+
+.chosen {
+  border-color: gold;
+}
+
+.tools__item:hover {
+  cursor: pointer;
+  background: rgb(73, 73, 73);
+}
+
+.color-select {
+  display: flex;
+  width: 96px;
+}
+
+.color-select__color {
+  width: 38px;
+  height: 38px;
+  margin: 1px 1px;
+  border: 5px solid #2D2D2D;
+}
+
+.color-select__color--is-active {
+  width: 38px;
+  height: 38px;
+  margin: 1px 1px;
+  border: 5px solid gold;
+}
+
+#first-color {
+  background: #000;
+}
+
+#second-color {
+  background: #fff;
+}
+
+.color-select__color:hover {
+  cursor: pointer;
+  border: 5px solid rgb(73, 73, 73);
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.frames-container {
+  width: 108px;
+  height: 93vh;
+  overflow: auto;
+  grid-area: frames;
+}
+
+.frame-container {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  margin: 4px auto;
+  border: 3px solid rgb(90, 89, 89);
+  border-radius: 5px;
+}
+
+.canvasWrapper{
+  position: relative;
+  width: 96px;
+  height: 96px;
+  margin: 4px auto;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+
+.frame-container:hover {
+  cursor: pointer;
+  border-color: rgb(110, 110, 110);
+}
+
+.frame-container__order {
+  position: absolute;
+  width: 30px;
+  height: 25px;
+  padding-top: 5px;
+  text-align: center;
+  font-weight: 700;
+  color: #000;
+  background-color: gold;
+  border-radius: 2px;
+}
+
+.frame{
+	width:100%
+}
+
+.remove {
+  visibility: visible;
+    position: relative;
+    top: -35px;
+}
+
+.remove:hover {
+  cursor: pointer;
+  border: 1px solid yellow;
+}
+
+.copy {
+  visibility: visible;
+    position: relative;
+    top: -35px;
+}
+
+.copy:hover {
+  cursor: pointer;
+  border: 1px solid yellow;
+}
+
+.animation-canvas{
+	border: 3px solid black;
+}
+.tools__image{
+	padding: 5px;
+}
+
+.\--option-visible {
+  visibility: visible;
+}
+
+.frames-container__add-frame {
+  width: 96px;
+  height: 50px;
+  margin: 0 auto;
+  text-align: center;
+  color: rgb(165, 165, 165);
+  border: 3px solid rgb(110, 110, 110);
+  border-radius: 5px;
+}
+
+.frames-container__add-frame p {
+  margin: 7% 0;
+}
+
+.frames-container__add-frame:hover {
+  cursor: pointer;
+  color: gold;
+  border-color: gold;
+}
+.canvas-wrapper{
+	width: 100%;
+}
+
+.main-canvas {
+    background-color: #bababa;
+    width: 100%;
+    image-rendering: pixelated;
+}
+
+.canvas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(201, 197, 197);
+  grid-area: canvas;
+}
+.preview-container {
+  margin-left: 12px;
+  grid-area: preview;
+}
+
+.preview-container__fps-control {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: rgb(165, 165, 165);
+  width: 200px;
+  background: #2D2D2D;
+}
+
+.preview-container__item {
+  width: 196px;
+  height: 22px;
+  min-height: max-content;
+  margin-top: 10px;
+  padding-top: 5px;
+  color: rgb(165, 165, 165);
+  text-align: center;
+  background: #2D2D2D;
+  border: 2px solid #2D2D2D;
+}
+
+.preview-container__item:hover {
+  cursor: pointer;
+  color: gold;
+  border: 2px solid gold;
+}
+main {
+  display: grid;
+  margin-top: 8px;
+  grid-template-columns: 1fr 1fr 5fr 2fr;
+  grid-template-areas: "toolbar frames canvas preview";
+  height: 93vh;
+  color: #fff;  
+}
+.hidden{
+	visibility: hidden;
+}
+
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Piskel clone</title>
+	<meta name="google-signin-client_id" content="558080730389-lpis8c67ijttr9vqsvbta0ur0n1ga8ss.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </head>
+
+ <body>
+		<header>
+			<h1>Piskel-clone</h1>
+			<input type="text" class="header__piskel-name" value="New Piskel">
+			<ul class="navigation">
+				<!--<li class="navigation__item"><a href=".." class="navigation__ref">Create Sprite</a></li>
+				<li class="navigation__item"><a href=".." class="navigation__ref" onclick="signOut();">Sign in</a></li>-->
+				<div class="g-signin2" data-onsuccess="onSignIn" id = "g-signin2">Sign in</div>
+
+        <div id="signOut" class="navigation__item hidden" onclick="signOut();">Sign out</div>
+
+        <script>
+		  document.getElementById('g-signin2').innerHtml="Sign in";
+          function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+              document.getElementById('signOut').classList.add('hidden');
+			  document.getElementById('g-signin2').classList.remove('hidden');
+            });
+          }
+        </script>
+
+        <script>
+          function onSignIn(googleUser) {
+			document.getElementById('signOut').classList.remove('hidden');	
+            document.getElementById('g-signin2').classList.add('hidden');
+          }
+        </script>
+			</ul>
+		</header>
+		<main>
+			<section class="toolbar">
+				<div class="line-width-wrapper">
+					<div class="line-1 line-width chosen-line" id="line-1">
+					</div>
+
+					<div class="line-2 line-width" id="line-2">
+					</div>
+
+					<div class="line-3 line-width" id="line-3">
+					</div>
+
+					<div class="line-4 line-width" id="line-4">
+					</div>
+				</div>
+				<ul class="tools" id="tools">
+					<li class="tools__item chosen tool" id="penTool"><img alt="toolImage" id="pen" title="Pen tool" class="tools__image"></li>
+					<li class="tools__item tool" id="eraserTool"><img alt="toolImage" id="eraser" title="Eraser tool" class="tools__image"></li>
+					<li class="tools__item tool" id="pipetteTool"><img id="pipette" alt="toolImage" title="Color picker" class="tools__image"></li>
+					<li class="tools__item tool" id="strokeTool"><img id="stroke" alt="toolImage" title="Stroke tool" class="tools__image"></li>
+					<li class="tools__item tool" id="bucketTool"><img id="bucket" alt="toolImage" title="Canvas bucket tool" class="tools__image"></li>
+					<li class="tools__item tool" id="paintPxTool"><img id="paintPx" alt="toolImage"  title="Paint all pixels of the same color" class="tools__image"></li>
+				</ul>
+				<div class="color-select">
+					<input class="color-select__color--is-active" id="primary-color" type="color" value="#000000">
+					<input class="color-select__color" id="rotate-color" type="color" value="#000000">
+				</div>
+			</section>
+			<div class="frames-container fraims-wrapper">
+				<div class="frames-container__add-frame" id="new-frame-button"><p>Add new frame</p></div>
+				<div class="canvasWrapper">
+					<canvas class="frame" id="frame" width="64" height="64"></canvas>
+					<img class="remove" id="remove">
+					<img class="copy" id="copy">
+				</div>
+				
+			</div>
+			
+			<div class="canvas-wrapper">
+				<canvas class="main-canvas" id="main-canvas" width="640" height="640"></canvas>
+				<div class="coord" id="coordWrap">[64x64]</div></br></br></br>
+			</div>
+			<div class="preview-container">
+				<canvas class="animation-canvas" width="190" height="190"></canvas>
+				<div class="preview-container__fps-control">
+					<p>24FPS</p>
+					<input type="range" min="0" max="24" step="1" id="speedAnimation">
+				</div>
+				
+				<div class="preview-container__item">
+					<p id="btn32"> Size canvas 32x32</p>
+				</div>
+				<div class="preview-container__item">
+					<p id="btn64"> Size canvas 64x64</p>
+				</div>
+				<div class="preview-container__item">	
+					<p id="btn128">Size canvas 128x128</p>
+				</div>
+				
+				<div class="preview-container__item save-gif" id="save-gif"><p>Download GIF</p></div>
+				<div class="preview-container__item full-screen" id="full-screen"><p>Fullscreen</p></div>
+			</div>
+		</main>
+
+
+</body>
+</html>

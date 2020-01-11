@@ -1,0 +1,121 @@
+body {
+  background: #1D1D1D;
+  font-family: 'Nunito';
+}
+
+h1 {
+    margin: 0;
+    font-weight: 400;
+	font-size: 24px;
+    color: #fff;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: #2D2D2D;
+  align-items: center;
+  padding: 2%;
+}
+
+.header-nav {
+  margin-right: 1%;
+}
+
+.nav-button {
+  background: #FFD700;
+  height: 24px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.description {
+  padding: 10px 0;
+  background: rgb(105, 105, 105);
+  text-align: center;
+}
+
+.description-header {
+  font-size: 38px;
+  color: #f2f2f2;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.description-image {
+  width: 65%;
+  height: 65%;
+}
+
+.examples {
+  text-align: center;
+}
+
+.examples-header {
+  font-size: 28px;
+  font-weight: bold;
+  color: #f2f2f2;
+  padding: 15px 0;
+}
+
+.functionality {
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+  background: rgb(105, 105, 105);
+}
+
+.functionality-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: right;
+}
+
+.functionality-header {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: bold;
+  color: white;
+}
+
+.functionality-item {
+  font-size: 18px;
+  line-height:36px;
+  font-weight: bold;
+  color: white;
+}
+
+.link{
+	background: #1D1D1D;
+	text-align: center;
+}	
+
+.examples-header{
+	font-size: 28px;
+	line-height: 36px;
+	font-weight: bold;
+	color: white;
+}
+
+
+.examples-link{
+	font-size: 14px;
+	line-height: 36px;
+	font-weight: bold;
+	color: white;
+}
+	
+	
+.footer {
+  background: rgb(14, 13, 13);
+  color: #f2f2f2;
+  padding: 10px 0;
+  font-size: 18px;
+  text-align: center;
+}
